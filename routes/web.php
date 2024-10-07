@@ -31,7 +31,7 @@ Route::get('/penjualan', [myController::class, 'penjualan'])->name('penjualan');
 
 //JOBSHEET 3
 Route::get('/level', [LevelController::class, 'index'])->name('level.index');
-Route::get('/kategori', [KategoriController::class, 'index'])->name('kategori.index');
+Route::get('/kategori/index', [KategoriController::class, 'index'])->name('kategori.index');
 Route::get('/user/', [UserController::class, 'index'])->name('user');
 
 //jobsheet 5
@@ -42,6 +42,10 @@ Route::get('/user/ubah/{id}', [UserController::class, 'ubah'])->name('ubah');
 Route::put('/user/ubah_simpan/{id}', [UserController::class, 'ubah_simpan'])->name('ubah_simpan');
 Route::get('/user/hapus/{id}', [UserController::class, 'hapus'])->name('hapus');
 
+//Jobsheet 6
+//Kategori
+Route::get('/kategori/create', [KategoriController::class, 'create'])->name('kategori.create');
+Route::post('/kategori', [KategoriController::class, 'store'])->name('kategori.store');
 // Route::get('/user', function () {
 //     $user_id = request()->user_id;
 //     return view('user', $user_id);
